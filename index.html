@@ -3,25 +3,54 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>pagina</title>
+    <title>York Moda, accesorios y más</title>
     <link rel="stylesheet" href="style.css">
+    <style>
+        .informacion-adicional {
+            display: none;
+            margin-top: 5px;
+            padding: 10px;
+            background-color: #f9f9f9;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            font-size: 0.9em;
+        }
+        .ofert-txt .informacion-adicional {
+            margin-top: 5px;
+        }
+        .btn-info {
+            display: inline-block;
+            padding: 10px 20px;
+            text-decoration: none;
+            color: #fff;
+            background-color: #25a18e; /* Color verde original */
+            border-radius: 5px;
+            font-size: 0.9em;
+            border: none;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+            margin-right: 5px; /* Espacio entre el botón y el de agregar al carrito */
+        }
+
+        .btn-info:hover {
+            background-color: #1c7567;
+        }
+    </style>
 </head>
 <body>
-    
     <header class="header">
-
         <div class="menu container">
-            <a href="#" class="logo">York Moda, accesorio y más</a>
+            <a href="#" class="logo">York Moda, accesorios y más</a>
             <input type="checkbox" id="menu"/>
             <label for="menu">
                 <img src="images/menu.png" class="menu-icono" alt="menu">
             </label>
             <nav class="navbar">
                 <ul>
-                    <li><a href="index.html">inicio</a></li>
-                    <li><a href="#servicio">servicios</a></li>
-                    <li><a href="#producto">producto</a></li>
-                    <li><a href="#contact"> variedades y contacto</a></li>
+                    <li><a href="index.html">Inicio</a></li>
+                    <li><a href="#servicio">Servicios</a></li>
+                    <li><a href="#producto">Productos</a></li>
+                    <li><a href="#contact">Variedades y Contacto</a></li>
                 </ul>
             </nav>
             <div>
@@ -32,207 +61,192 @@
                             <table id="lista-carrito">
                                 <thead>
                                     <tr>
-                                       <th>Imagen</th>
-                                       <th>nombre</th>
-                                       <th>precio</th>
-                                       <th></th> 
+                                        <th>Imagen</th>
+                                        <th>Nombre</th>
+                                        <th>Precio</th>
+                                        <th></th>
                                     </tr>
                                 </thead>
                                 <tbody></tbody>
                             </table>
-                            <a href="#" id="vaciar-carrito" class="btn-2">vaciar carrito</a>
+                            <a href="#" id="vaciar-carrito" class="btn-2">Vaciar carrito</a>
                         </div>
                     </li>
                 </ul>
             </div>
         </div>
-        
+
         <div class="header-content container">
             <div class="header-img">
-                <img src="images/right.png" alt="100px">
+                <img src="images/right.png" alt="oferta">
             </div>
             <div id="lista2" class="header-txt">
-                <h1>Oferta especiales</h1>
+                <h1>Ofertas especiales</h1>
                 <p>Estrena las mejores prendas</p>
-                <a href="#" class="btn-1">información</a>
+                <a href="#" class="btn-1 mostrar-info" data-info="Descubre nuestras increíbles ofertas de temporada. ¡No te las pierdas!">Información</a>
+                <div class="informacion-adicional" id="info-ofertas-especiales"></div>
             </div>
-        
         </div>
     </header>
 
-    <section class="ofert container" id="producto">   
+    <section class="ofert container" id="producto">
         <div class="ofert-1">
             <div class="ofert-img">
-                <img src="images/f1.png" alt=""> 
+                <img src="images/f1.png" alt="producto1">
             </div>
             <div class="ofert-txt">
-                <h3>producto1</h3>
-                <a href="#" class="btn-2">información</a>
+                <h3>Correa York</h3>
+                <p class="precio">55</p>
+                <button class="btn-info mostrar-info" data-info="Correa de cuero genuino, varios colores y tallas disponibles. Hebilla metálica resistente.">Información</button>
+                <div class="informacion-adicional" id="info-correa-york"></div>
             </div>
-
         </div>
-
         <div class="ofert-1">
             <div class="ofert-img">
-                <img src="images/f2.png" alt=""> 
+                <img src="images/f2.png" alt="producto2">
             </div>
             <div class="ofert-txt">
-                <h3>producto2</h3>
-                <a href="#" class="btn-2">información</a>
+                <h3>Tennis York</h3>
+                <p class="precio">120</p>
+                <button class="btn-info mostrar-info" data-info="Tennis deportivos con suela antideslizante y diseño moderno. Disponibles en varias tallas.">Información</button>
+                <div class="informacion-adicional" id="info-tennis-york"></div>
             </div>
-
         </div>
-
         <div class="ofert-1">
             <div class="ofert-img">
-                <img src="images/f3.png" alt=""> 
+                <img src="images/f3.png" alt="producto3">
             </div>
-
             <div class="ofert-txt">
-                <h3>producto3</h3>
-                <a href="#" class="btn-2">información</a>
+                <h3>Cartera York</h3>
+                <p class="precio">80</p>
+                <button class="btn-info mostrar-info" data-info="Cartera de cuero sintético con múltiples compartimentos para tarjetas y billetes. Diseño compacto y elegante.">Información</button>
+                <div class="informacion-adicional" id="info-cartera-york"></div>
             </div>
         </div>
-
     </section>
 
     <main class="producto container" id="lista-1">
-        
-        <h2>producto</h2>
-
+        <h2>Productos</h2>
         <div class="producto-content">
-
             <div class="producto">
-                <img src="images/1.png" alt="">
+                <img src="images/1.png" alt="producto">
                 <div class="producto-txt">
-                    <h3>York</h3>
-                    <p>calidad premium</p>
+                    <h3>Camisa Nautica York</h3>
+                    <p>Calidad premium</p>
                     <p class="precio">280</p>
+                    <button class="btn-info mostrar-info" data-info="Camisa de la marca Nautica, fabricada con algodón de alta calidad. Disponible en tallas S, M, L y XL.">Información</button>
+                    <div class="informacion-adicional" id="info-camisa-nautica-york"></div>
                     <a href="#" class="agregar-carrito btn-2" data-id="1">Agregar al carrito</a>
                 </div>
             </div>
             <div class="producto">
-                <img src="images/2.png" alt="">
+                <img src="images/2.png" alt="producto">
                 <div class="producto-txt">
-                    <h3>York</h3>
-                    <p>calidad premium</p>
-                    <p class="precio">280</p>
+                    <h3>Chaqueta York</h3>
+                    <p>Calidad premium</p>
+                    <p class="precio">250</p>
+                    <button class="btn-info mostrar-info" data-info="Chaqueta de tela resistente con forro interior suave. Ideal para climas templados. Disponible en colores negro, azul y gris.">Información</button>
+                    <div class="informacion-adicional" id="info-chaqueta-york"></div>
                     <a href="#" class="agregar-carrito btn-2" data-id="2">Agregar al carrito</a>
                 </div>
             </div>
-
             <div class="producto">
-                <img src="images/3.png" alt="">
+                <img src="images/3.png" alt="producto">
                 <div class="producto-txt">
-                    <h3>York</h3>
-                    <p>calidad premium</p>
-                    <p class="precio">280</p>
+                    <h3>chaqueta impermeable York</h3>
+                    <p>Calidad premium</p>
+                    <p class="precio">300</p>
+                    <button class="btn-info mostrar-info" data-info="Chaqueta impermeable con capucha ajustable. Protege de la lluvia y el viento. Bolsillos con cierre para mayor seguridad.">Información</button>
+                    <div class="informacion-adicional" id="info-chaqueta-impermeable-york"></div>
                     <a href="#" class="agregar-carrito btn-2" data-id="3">Agregar al carrito</a>
                 </div>
             </div>
-
             <div class="producto">
-                <img src="images/4.png" alt="">
+                <img src="images/4.png" alt="producto">
                 <div class="producto-txt">
-                    <h3>York</h3>
-                    <p>calidad premium</p>
-                    <p class="precio">280</p>
+                    <h3>Camisa Azul York</h3>
+                    <p>Calidad premium</p>
+                    <p class="precio">450</p>
+                    <button class="btn-info mostrar-info" data-info="Camisa de algodón de manga larga en color azul. Corte clásico y cómodo. Ideal para uso formal o casual.">Información</button>
+                    <div class="informacion-adicional" id="info-camisa-azul-york"></div>
                     <a href="#" class="agregar-carrito btn-2" data-id="4">Agregar al carrito</a>
                 </div>
             </div>
 
             <div class="producto">
-                <img src="images/5.png" alt="">
+                <img src="images/5.png" alt="producto">
                 <div class="producto-txt">
-                    <h3>York</h3>
-                    <p>calidad premium</p>
-                    <p class="precio">280</p>
+                    <h3>Camisa Negra York</h3>
+                    <p>Diseño exclusivo</p>
+                    <p class="precio">230</p>
+                    <button class="btn-info mostrar-info" data-info="Camisa de diseño moderno en color negro. Ideal para eventos casuales o salidas nocturnas. Tejido suave y transpirable.">Información</button>
+                    <div class="informacion-adicional" id="info-camisa-negra-york"></div>
                     <a href="#" class="agregar-carrito btn-2" data-id="5">Agregar al carrito</a>
                 </div>
             </div>
-
             <div class="producto">
-                <img src="images/6.png" alt="">
+                <img src="images/6.png" alt="producto">
                 <div class="producto-txt">
-                    <h3>York</h3>
-                    <p>calidad premium</p>
-                    <p class="precio">280</p>
+                    <h3>Abrigo de Invierno York</h3>
+                    <p>Comodidad total</p>
+                    <p class="precio">320</p>
+                    <button class="btn-info mostrar-info" data-info="Abrigo acolchado para invierno con cierre de cremallera y bolsillos laterales. Mantiene el calor en climas fríos.">Información</button>
+                    <div class="informacion-adicional" id="info-abrigo-invierno-york"></div>
                     <a href="#" class="agregar-carrito btn-2" data-id="6">Agregar al carrito</a>
                 </div>
             </div>
-
+            <div class="producto">
+                <img src="images/7.png" alt="producto">
+                <div class="producto-txt">
+                    <h3> Vestido Huipil York</h3>
+                    <p>Estilo moderno</p>
+                    <p class="precio">390</p>
+                    <button class="btn-info mostrar-info" data-info="Vestido de estilo huipil con detalles bordados a mano. Tejido ligero y fresco, ideal para el verano.">Información</button>
+                    <div class="informacion-adicional" id="info-vestido-huipil-york"></div>
+                    <a href="#" class="agregar-carrito btn-2" data-id="7">Agregar al carrito</a>
+                </div>
+            </div>
+            <div class="producto">
+                <img src="images/8.png" alt="producto">
+                <div class="producto-txt">
+                    <h3>Chaqueta de Cuero York</h3>
+                    <p>Ideal para eventos</p>
+                    <p class="precio">410</p>
+                    <button class="btn-info mostrar-info" data-info="Chaqueta de cuero genuino con diseño clásico. Cierre frontal y bolsillos con cremallera. Disponible en tallas M y L.">Información</button>
+                    <div class="informacion-adicional" id="info-chaqueta-cuero-york"></div>
+                    <a href="#" class="agregar-carrito btn-2" data-id="8">Agregar al carrito</a>
+                </div>
+            </div>
         </div>
-
     </main>
 
     <section class="icons container">
-         
         <div class="icon-1">
             <div class="icon-img">
-                <img src="images/i1.svg" alt="">
+                <img src="images/i1.svg" alt="Moda">
             </div>
-    
             <div class="icon-txt">
                 <h3>Moda.</h3>
-                <p>
-                    ¡Tu comodidad es nuestra prioridad!
-                </p>            
+                <p>¡Tu comodidad es nuestra prioridad!</p>
             </div>
         </div>
-
         <div class="icon-1">
             <div class="icon-img">
-                <img src="images/i2.svg" alt="">
+                <img src="images/i2.svg" alt="Estilo">
             </div>
-    
             <div class="icon-txt">
                 <h3>Estilo.</h3>
-                <p>
-                  En York encontrarás todo lo que necesitas para sentirte cómodo.
-                </p>            
+                <p>En York encontrarás todo lo que necesitas para sentirte cómodo.</p>
             </div>
         </div>
-
         <div class="icon-1">
             <div class="icon-img">
-                <img src="images/i3.svg" alt="">
+                <img src="images/i3.svg" alt="Tendencia">
             </div>
-    
             <div class="icon-txt">
                 <h3>Tendencia.</h3>
-                <p>
-                    Tenemos lo último del mercado
-                </p>            
+                <p>Tenemos lo último del mercado</p>
             </div>
-        </div>
-
-    </section>
-
-    <section class="blog container" id="servicio">
-        <div class="blog-1">
-            <img src="images/b1.jpg" alt="">
-            <h3>Todo tipo de accesorios para ella.</h3>
-            <p>
-               Completa tu conjunto con los accesorios adecuados. Ya sea una joya, un bolso, unas gafas de sol, un cinturón o un pañuelo, completa tu look con los accesorios adecuados y redondea cualquier conjunto. Las últimas tendencias en accesorios y los clásicos. Obtén ideas frescas para la nueva temporada y para cada ocasión.
-            </p>
-        </div>
-
-        <div class="blog-1">
-            <img src="images/b2.jpg" alt="">
-            <h3>Calzado</h3>
-            <p>
-                Con la ropa, las prendas exteriores y los zapatos, los hombres solían pensar que tenían suficiente cuando se trataba de variaciones en su vestuario. Sin embargo, cuando se trata de accesorios, los hombres tienden a ser más conservadores que las mujeres en sus elecciones de moda.
-            </p>
-        </div>
-
-        <div class="blog-1">
-            <img src="images/b3.jpg" alt="">
-            <h3>Estilo</h3>
-            <p>
-                1. "Descubre el traje que no sólo se adapta a tu cuerpo, sino que también realza tu estilo personal."
-                2. "Nuestros jeans son el equilibrio perfecto entre comodidad y tendencia, diseñados para el hombre moderno."
-                3. "Imagina una camisa que hable por ti antes de decir una palabra, así es nuestra colección exclusiva."
-            </p>
         </div>
     </section>
 
@@ -241,40 +255,37 @@
             <div class="link">
                 <h3>Variedades</h3>
                 <ul>
-                    <li><a href="#">blusa</a> </li>
-                    <li><a href="#">zandalias</a> </li>
-                    <li><a href="#">zapatillas</a> </li>
-                    <li><a href="#">lencería</a> </li>
+                    <li><a href="#">Blusa</a></li>
+                    <li><a href="#">Zandalias</a></li>
+                    <li><a href="#">Zapatillas</a></li>
+                    <li><a href="#">Lencería</a></li>
                 </ul>
             </div>
-
             <div class="link">
                 <h3>Variedades</h3>
                 <ul>
-                    <li><a href="#">camisa</a> </li>
-                    <li><a href="#">pantalones</a> </li>
-                    <li><a href="#">T-shirt</a> </li>
-                    <li><a href="#">correa</a> </li>
+                    <li><a href="#">Camisa</a></li>
+                    <li><a href="#">Pantalones</a></li>
+                    <li><a href="#">T-shirt</a></li>
+                    <li><a href="#">Correa</a></li>
                 </ul>
             </div>
-
             <div class="link">
                 <h3>Variedades</h3>
                 <ul>
-                    <li><a href="#">reloj</a> </li>
-                    <li><a href="#">perfumes</a> </li>
-                    <li><a href="#">accesorios</a> </li>
-                    <li><a href="#">zapatos</a> </li>
+                    <li><a href="#">Reloj</a></li>
+                    <li><a href="#">Perfumes</a></li>
+                    <li><a href="#">Accesorios</a></li>
+                    <li><a href="#">Zapatos</a></li>
                 </ul>
             </div>
-
             <div class="link">
                 <h3>Variedades</h3>
                 <ul>
-                    <li><a href="#">sport</a> </li>
-                    <li><a href="#">sudadera</a> </li>
-                    <li><a href="#">tacones</a> </li>
-                    <li><a href="#">carteras</a> </li>
+                    <li><a href="#">Sport</a></li>
+                    <li><a href="#">Sudadera</a></li>
+                    <li><a href="#">Tacones</a></li>
+                    <li><a href="#">Carteras</a></li>
                 </ul>
             </div>
         </div>
@@ -296,11 +307,43 @@
         </form>
     </div>
 
-</body>
-</html>
-</body>
-</html>
-    
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const botonesInfo = document.querySelectorAll('.mostrar-info');
+
+            botonesInfo.forEach(boton => {
+                boton.addEventListener('click', function(event) {
+                    event.preventDefault();
+                    const info = this.getAttribute('data-info');
+                    const infoDivId = this.nextElementSibling ? this.nextElementSibling.id : null;
+                    const infoDiv = infoDivId ? document.getElementById(infoDivId) : null;
+
+                    if (infoDiv) {
+                        infoDiv.textContent = info;
+                        infoDiv.style.display = 'block';
+
+                        // Ocultar después de un tiempo (opcional)
+                        setTimeout(() => {
+                            infoDiv.style.display = 'none';
+                        }, 3000); // Ocultar después de 3 segundos
+                    }
+                });
+            });
+        });
+    </script>
     <script src="script.js"></script>
 </body>
 </html>
+             
+     
+        
+           
+           
+            
+         
+
+      
+  
+           
+
+    
